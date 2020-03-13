@@ -28,10 +28,10 @@ double overlap(Rect *A,Rect *B){
 
 	x1 = A->x+A->w;
 	x2 = B->x+B->w;
-	y1 = A->y-B->h;
+	y1 = A->y-A->h;
 	y2 = B->y-B->h;
 
-    n= abs(max(A->x,B->x)+abs(min(x1,x2)));
+    n= abs(max(A->x,B->x)+min(x1,x2));
     m= abs(min(A->y,B->y)-abs(max(y1,y2)));
 
    int j = n*m;
